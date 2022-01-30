@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  color: rgb(80, 170, 255);
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header header header header"
+    "main main . sidebar";
+  gap: 40px;
+}
+
+div[class^="grid-item"],
+div[class*="grid-item"] {
+  padding: 40px;
+}
+
+.grid-item-header {
+  grid-area: header;
+  background-color: #c56410;
+}
+
+.grid-item-main {
+  grid-area: main;
+  background-color: #c510bf;
+}
+.grid-item-sidebar {
+  grid-area: sidebar;
+  background-color: #c52510;
+}

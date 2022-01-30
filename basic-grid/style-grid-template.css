@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  color: coral;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.grid-item {
+  background-color: cornflowerblue;
+  padding: 40px;
+}
+
+.grid-item:first-child {
+  grid-row-start: 1;
+  grid-row-end: span 2;
+}
+.grid-item:last-child {
+  grid-column: 2/4;
+}
